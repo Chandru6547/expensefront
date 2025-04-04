@@ -12,7 +12,7 @@ const ViewExpenses = () => {
 
   const fetchExpenses = async () => {
     try {
-      const response = await axios.get(`http://localhost:5000/expenses?period=${filter}`);
+      const response = await axios.get(`https://expenseback-u5j8.onrender.com/expenses?period=${filter}`);
       setExpenses(response.data);
     } catch (error) {
       console.error("Error fetching expenses:", error);

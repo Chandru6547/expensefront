@@ -13,7 +13,7 @@ const AddIncome = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:5000/income", { amount, source });
+      await axios.post("https://expenseback-u5j8.onrender.com/income", { amount, source });
       toast.success("Income added successfully!", { position: "top-center" });
       setAmount(""); // Clear input fields after submission
       setSource("");

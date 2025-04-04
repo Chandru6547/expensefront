@@ -9,11 +9,11 @@ const Dashboard = () => {
   const navigate = useNavigate(); // Hook for navigation
 
   useEffect(() => {
-    axios.get("http://localhost:5000/income-summary")
+    axios.get("https://expenseback-u5j8.onrender.com/income-summary")
       .then(res => setIncome(res.data.totalIncome))
       .catch(err => console.error(err));
 
-    axios.get("http://localhost:5000/expense-summary")  
+    axios.get("https://expenseback-u5j8.onrender.com/expense-summary")  
       .then(res => setExpense(res.data.totalExpense))
       .catch(err => console.error(err));
   }, []);

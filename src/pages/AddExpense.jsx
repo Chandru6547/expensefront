@@ -8,7 +8,7 @@ const AddExpense = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios.post("http://localhost:5000/expense", { amount, category })
+    axios.post("https://expenseback-u5j8.onrender.com/expense", { amount, category })
       .then(() => alert("Expense added successfully!"))
       .catch(err => console.error(err));
   };
